@@ -27,9 +27,9 @@ export function Footer() {
               <a href="https://www.instagram.com/geocloudtechnologies/" className="text-gray-400 hover:text-[#00d9ff] transition-colors" aria-label="Instagram" target="_blank">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://github.com/GeoCloud-Technologies" className="text-gray-400 hover:text-[#00d9ff] transition-colors" aria-label="GitHub" target="_blank">
+              {/* <a href="https://github.com/GeoCloud-Technologies" className="text-gray-400 hover:text-[#00d9ff] transition-colors" aria-label="GitHub" target="_blank">
                 <Github className="w-5 h-5" />
-              </a>
+              </a> */}
             </div>
           </div>
 
