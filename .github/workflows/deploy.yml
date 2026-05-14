@@ -36,9 +36,8 @@ jobs:
         run: npm ci
 
       - name: Build
-        # By default this sets the base to the repository name. 
-        # If this is an organization site (e.g. orgname.github.io) change this to just: run: npm run build
-        run: npx vite build --base=/${{ github.event.repository.name }}/
+        # Since you are using a custom domain (geo-cloud.tech), the site is hosted at the root (/)
+        run: npx vite build --base=/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
