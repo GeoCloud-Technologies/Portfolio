@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import CroppedLogo from "@/imports/Cropped_Logo.png";
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -24,7 +25,7 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img
-              src="/src/imports/Cropped_Logo.png"
+              src={CroppedLogo}
               alt="GeoCloud"
               className="h-10 w-10"
             />
@@ -72,7 +73,7 @@ export function Navbar() {
             <div className="flex items-center justify-between px-6 py-6 border-b border-white/10">
               <div className="flex items-center gap-3">
                 <img
-                  src="/src/imports/Cropped_Logo.png"
+                  src={CroppedLogo}
                   alt="GeoCloud"
                   className="h-10 w-10"
                 />

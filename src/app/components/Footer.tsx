@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone, Linkedin, Facebook, Instagram, Github } from "lucide-react";
+import LogoWithName from "@/imports/Logo_with_name.png";
 
 export function Footer() {
   return (
@@ -9,7 +10,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="space-y-4">
             <img
-              src="/src/imports/Logo_with_name.png"
+              src={LogoWithName}
               alt="GeoCloud Technologies"
               className="h-12 w-auto"
             />

@@ -38,7 +38,7 @@ let _geoDataPromise: Promise<GeoJSONData> | null = null;
 function fetchGeoJSON(): Promise<GeoJSONData> {
   if (_geoDataCache) return Promise.resolve(_geoDataCache);
   if (!_geoDataPromise) {
-    _geoDataPromise = fetch("/data/ne_110m_land.geojson")
+    _geoDataPromise = fetch(`${import.meta.env.BASE_URL}data/ne_110m_land.geojson`)
       .then((res) => res.json())
       .then((data: GeoJSONData) => {
         _geoDataCache = data;
