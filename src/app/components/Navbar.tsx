@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router";
 import CroppedLogo from "@/imports/Cropped_Logo.png";
 
 export function Navbar() {
@@ -23,17 +24,17 @@ export function Navbar() {
     >
       <div className="max-w-[1400px] mx-auto">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3 cursor-pointer group">
             <img
               src={CroppedLogo}
               alt="GeoCloud"
-              className="h-10 w-10"
+              className="h-10 w-10 transition-transform group-hover:scale-105"
             />
             <div>
-              <div className="text-white font-bold text-lg leading-tight">GeoCloud</div>
+              <div className="text-white font-bold text-lg leading-tight group-hover:text-[#00d9ff] transition-colors">GeoCloud</div>
               <div className="text-[#00d9ff] text-xs">Technologies</div>
             </div>
-          </div>
+          </Link>
 
           <div className="hidden lg:flex items-center gap-8">
             {menuItems.map((item) => (
@@ -71,7 +72,7 @@ export function Navbar() {
             className="fixed inset-0 z-50 flex flex-col bg-[#0a1628]/95"
           >
             <div className="flex items-center justify-between px-6 py-6 border-b border-white/10">
-              <div className="flex items-center gap-3">
+              <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-3 cursor-pointer">
                 <img
                   src={CroppedLogo}
                   alt="GeoCloud"
@@ -81,7 +82,7 @@ export function Navbar() {
                   <div className="text-white font-bold text-lg leading-tight">GeoCloud</div>
                   <div className="text-[#00d9ff] text-xs">Technologies</div>
                 </div>
-              </div>
+              </Link>
               <button
                 className="p-2 text-white hover:text-[#00d9ff] transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}

@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone, Linkedin, Facebook, Instagram, Github } from "lucide-react";
+import { Link } from "react-router";
 import LogoWithName from "@/imports/Logo_with_name.png";
 
 export function Footer() {
@@ -46,7 +47,11 @@ export function Footer() {
           <div>
             <h4 className="text-white mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li className="hover:text-[#00d9ff] cursor-pointer transition-colors">About Us</li>
+              <li>
+                <Link to="/about" className="hover:text-[#00d9ff] cursor-pointer transition-colors block">
+                  About Us
+                </Link>
+              </li>
               <li className="hover:text-[#00d9ff] cursor-pointer transition-colors">Careers</li>
               <li className="hover:text-[#00d9ff] cursor-pointer transition-colors">Case Studies</li>
               <li className="hover:text-[#00d9ff] cursor-pointer transition-colors">Blog</li>
