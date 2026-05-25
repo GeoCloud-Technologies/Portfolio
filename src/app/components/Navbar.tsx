@@ -4,15 +4,17 @@ import { Menu, X } from "lucide-react";
 import { Link } from "react-router";
 import CroppedLogo from "@/imports/Cropped_Logo.png";
 
+const MotionLink = motion(Link);
+
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const menuItems = [
-    "IT CONSULTING",
-    "SOFTWARE DEVELOPMENT",
-    "AI INTEGRATION",
-    "HARDWARE R&D",
-    "CONTACT"
+    { name: "IT CONSULTING", path: "/it-consulting" },
+    { name: "SOFTWARE DEVELOPMENT", path: "/#software-development" },
+    { name: "AI INTEGRATION", path: "/#ai-integration" },
+    { name: "HARDWARE R&D", path: "/#hardware-r-d" },
+    { name: "CONTACT", path: "/contact" }
   ];
 
   return (
@@ -38,13 +40,13 @@ export function Navbar() {
 
           <div className="hidden lg:flex items-center gap-8">
             {menuItems.map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+              <Link
+                key={item.name}
+                to={item.path}
                 className="text-white text-xs font-medium tracking-wide hover:text-[#00d9ff] transition-colors duration-300 cursor-pointer"
               >
-                {item}
-              </a>
+                {item.name}
+              </Link>
             ))}
           </div>
 
@@ -93,17 +95,17 @@ export function Navbar() {
 
             <div className="flex flex-col items-center justify-center flex-1 gap-8">
               {menuItems.map((item, i) => (
-                <motion.a
-                  key={item}
-                  href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
+                <MotionLink
+                  key={item.name}
+                  to={item.path}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-white text-xl font-medium tracking-wide hover:text-[#00d9ff] transition-colors duration-300"
                 >
-                  {item}
-                </motion.a>
+                  {item.name}
+                </MotionLink>
               ))}
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
