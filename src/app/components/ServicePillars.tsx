@@ -54,15 +54,17 @@ export function ServicePillars() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
+            const cardId = service.title.toLowerCase().replace(/\s+/g, "-").replace(/&/g, "r-d");
             return (
               <motion.div
                 key={service.title}
+                id={cardId}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 whileHover={{ y: -8 }}
-                className="group relative"
+                className="group relative scroll-mt-24"
               >
                 <div className="h-full p-8 rounded-2xl backdrop-blur-xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 hover:border-[#00d9ff]/50 transition-all duration-500 shadow-xl hover:shadow-[0_0_40px_rgba(0,217,255,0.2)]">
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#00d9ff]/0 to-[#00d9ff]/0 group-hover:from-[#00d9ff]/5 group-hover:to-[#00ffea]/5 transition-all duration-500" />

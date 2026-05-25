@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { Cpu, Brain, Code, ChevronDown, Play } from "lucide-react";
 import { EarthGlobe } from "./EarthGlobe";
+import { Link } from "react-router";
 
 export function Hero() {
   return (
@@ -89,9 +90,12 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center px-6 sm:px-0 w-full max-w-sm mx-auto sm:max-w-none"
           >
-            <button className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-3.5 bg-[#00d9ff] text-[#0a1628] text-sm font-bold tracking-wide rounded-full hover:shadow-[0_0_30px_rgba(0,217,255,0.6)] transition-all duration-300">
+            <Link 
+              to="/contact" 
+              className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-3.5 bg-[#00d9ff] text-[#0a1628] text-sm font-bold tracking-wide rounded-full hover:shadow-[0_0_30px_rgba(0,217,255,0.6)] transition-all duration-300 text-center flex items-center justify-center cursor-pointer"
+            >
               REQUEST A CONSULT
-            </button>
+            </Link>
             <button className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-3.5 border-2 border-white/30 text-white text-sm font-bold tracking-wide rounded-full hover:border-[#00d9ff] hover:text-[#00d9ff] transition-all duration-300">
               LEARN MORE
             </button>

@@ -4,7 +4,7 @@ import LogoWithName from "@/imports/Logo_with_name.png";
 
 export function Footer() {
   return (
-    <footer className="relative py-16 px-6 border-t border-[#00d9ff]/20">
+    <footer id="contact" className="relative py-16 px-6 border-t border-[#00d9ff]/20 scroll-mt-10">
       <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
@@ -37,10 +37,26 @@ export function Footer() {
           <div>
             <h4 className="text-white mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li className="hover:text-[#00d9ff] cursor-pointer transition-colors">Hardware R&D</li>
-              <li className="hover:text-[#00d9ff] cursor-pointer transition-colors">AI Integration</li>
-              <li className="hover:text-[#00d9ff] cursor-pointer transition-colors">Software Development</li>
-              <li className="hover:text-[#00d9ff] cursor-pointer transition-colors">IT Consulting</li>
+              <li>
+                <Link to="/#hardware-r-d" className="hover:text-[#00d9ff] cursor-pointer transition-colors block">
+                  Hardware R&D
+                </Link>
+              </li>
+              <li>
+                <Link to="/#ai-integration" className="hover:text-[#00d9ff] cursor-pointer transition-colors block">
+                  AI Integration
+                </Link>
+              </li>
+              <li>
+                <Link to="/#software-development" className="hover:text-[#00d9ff] cursor-pointer transition-colors block">
+                  Software Development
+                </Link>
+              </li>
+              <li>
+                <Link to="/it-consulting" className="hover:text-[#00d9ff] cursor-pointer transition-colors block">
+                  IT Consulting
+                </Link>
+              </li>
             </ul>
           </div>
 
