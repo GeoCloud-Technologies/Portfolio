@@ -37,7 +37,7 @@ jobs:
 
       - name: Build
         # Since you are using a custom domain (geo-cloud.tech), the site is hosted at the root (/)
-        run: npx vite build --base=/
+        run: npx vite build --base=/ && cp dist/index.html dist/404.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
