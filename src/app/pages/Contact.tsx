@@ -290,7 +290,7 @@ export function Contact() {
             Establish <span className="bg-gradient-to-r from-[#00d9ff] to-[#00ffea] bg-clip-text text-transparent">Contact</span>
           </h1>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed font-light">
-            Initialize connection via our asynchronous intake system or schedule a live architecture blueprinting session directly.
+            Initialize connection via our asynchronous intake system or schedule a live architecture blueprinting session directly with our experts.
           </p>
         </motion.div>
 
@@ -358,7 +358,7 @@ export function Contact() {
                   Submit a System Brief
                 </h2>
                 <p className="text-sm text-gray-400 mt-2 font-light leading-relaxed">
-                  Outline your technical bottleneck, infrastructure requirements, or digital transformation goals. Our engineering team will review your parameters and initiate contact within 24 hours.
+                  Outline your technical bottleneck, infrastructure requirements or digital transformation goals. Our engineering team will conduct a review and initiate contact within 24 hours.
                 </p>
               </div>
             </div>
@@ -402,7 +402,7 @@ export function Contact() {
                       {/* Enterprise input */}
                       <div className="relative group">
                         <label className="text-[10px] font-bold tracking-widest text-gray-500 uppercase block mb-1.5">
-                          Enterprise / Company
+                          Enterprise / Business Name
                         </label>
                         <input
                           type="text"
@@ -418,7 +418,7 @@ export function Contact() {
                     {/* Email input */}
                     <div className="relative group">
                       <label className="text-[10px] font-bold tracking-widest text-gray-500 uppercase block mb-1.5">
-                        Comms Link (Work Email)
+                        Comms Link (Email)
                       </label>
                       <input
                         type="email"
@@ -440,7 +440,7 @@ export function Contact() {
                     {/* Vector Dropdown */}
                     <div className="relative group">
                       <label className="text-[10px] font-bold tracking-widest text-gray-500 uppercase block mb-1.5">
-                        Target Vector
+                        Target Service Suite
                       </label>
                       <select
                         value={briefForm.vector}
