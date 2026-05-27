@@ -185,10 +185,12 @@ function ContinentLines({ radius }: { radius: number }) {
 
 // --- Globe Core ---
 
-function GlobeCore() {
-  const groupRef = useRef<THREE.Group>(null);
+interface GlobeCoreProps {
+  continentTexture: THREE.CanvasTexture | null;
+}
 
-  const continentTexture = useGeoJSONTexture();
+function GlobeCore({ continentTexture }: GlobeCoreProps) {
+  const groupRef = useRef<THREE.Group>(null);
 
   useFrame(() => {
     if (groupRef.current) groupRef.current.rotation.y += 0.001;
@@ -202,9 +204,9 @@ function GlobeCore() {
         <mesh>
           <sphereGeometry args={[2.5, 64, 64]} />
           {continentTexture ? (
-            <meshBasicMaterial map={continentTexture} toneMapped={false} />
+            <meshBasicMaterial key="textured" map={continentTexture} toneMapped={false} />
           ) : (
-            <meshBasicMaterial color="#030a14" toneMapped={false} />
+            <meshBasicMaterial key="solid" color="#030a14" toneMapped={false} />
           )}
         </mesh>
 
@@ -332,7 +334,8 @@ function ScaleGroup({ children }: { children: React.ReactNode }) {
 // --- Exported Component ---
 
 export function EarthGlobe() {
-  const [ready, setReady] = useState(false);
+  const [canvasReady, setCanvasReady] = useState(false);
+  const continentTexture = useGeoJSONTexture();
 
   const handleCreated = useCallback((state: { gl: THREE.WebGLRenderer }) => {
     state.gl.toneMapping = THREE.NoToneMapping;
@@ -340,10 +343,12 @@ export function EarthGlobe() {
     // Wait a frame to ensure settings are applied before showing
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
-        setReady(true);
+        setCanvasReady(true);
       });
     });
   }, []);
+
+  const isReady = canvasReady && continentTexture !== null;
 
   return (
     <div className="relative w-full h-full flex items-center justify-center bg-transparent">
@@ -353,13 +358,13 @@ export function EarthGlobe() {
         flat
         onCreated={handleCreated}
         style={{
-          opacity: ready ? 1 : 0,
+          opacity: isReady ? 1 : 0,
           transition: "opacity 0.4s ease-in",
           backgroundColor: "transparent"
         }}
       >
         <ScaleGroup>
-          <GlobeCore />
+          <GlobeCore continentTexture={continentTexture} />
           <OrbitNodes />
         </ScaleGroup>
         <OrbitControls
