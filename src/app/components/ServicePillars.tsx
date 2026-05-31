@@ -81,7 +81,7 @@ export function ServicePillars() {
                       <p className="text-[#00d9ff] text-sm uppercase tracking-wider mb-4">
                         {service.subtitle}
                       </p>
-                      <p className="text-gray-400 leading-relaxed">
+                      <p data-nosnippet className="text-gray-400 leading-relaxed">
                         {service.description}
                       </p>
                     </div>
