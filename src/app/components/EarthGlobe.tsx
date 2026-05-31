@@ -104,24 +104,6 @@ function useGeoJSONTexture() {
           }
         }
 
-        // Subtle lat/lon grid lines
-        ctx.strokeStyle = "rgba(0, 180, 220, 0.04)";
-        ctx.lineWidth = 0.5;
-        for (let lat = -80; lat <= 80; lat += 15) {
-          const [, y] = toXY(0, lat);
-          ctx.beginPath();
-          ctx.moveTo(0, y);
-          ctx.lineTo(canvas.width, y);
-          ctx.stroke();
-        }
-        for (let lon = -180; lon <= 180; lon += 15) {
-          const [x] = toXY(lon, 0);
-          ctx.beginPath();
-          ctx.moveTo(x, 0);
-          ctx.lineTo(x, canvas.height);
-          ctx.stroke();
-        }
-
         const tex = new THREE.CanvasTexture(canvas);
         setTexture(tex);
       })
@@ -212,18 +194,6 @@ function GlobeCore({ continentTexture }: GlobeCoreProps) {
 
         {/* 3D continent outline lines from GeoJSON */}
         <ContinentLines radius={2.505} />
-
-        {/* Subtle wireframe grid overlay */}
-        <mesh>
-          <sphereGeometry args={[2.52, 40, 40]} />
-          <meshBasicMaterial
-            color="#00d9ff"
-            wireframe
-            transparent
-            opacity={0.06}
-            toneMapped={false}
-          />
-        </mesh>
       </group>
 
       {/* Atmosphere glow — rendered BEHIND everything via BackSide + larger scale */}
