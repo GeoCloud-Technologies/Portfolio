@@ -19,7 +19,7 @@ const services = [
     description: "Intelligent systems that learn, adapt, and evolve. We build AI solutions that transform data into actionable insights and automated decisions.",
     features: ["Machine Learning Models", "Neural Networks", "Computer Vision", "NLP Solutions"],
     gradient: "from-[#00ffea] to-[#00d9ff]",
-    link: "/#contact"
+    link: "/ai-integration"
   },
   {
     icon: Code,
