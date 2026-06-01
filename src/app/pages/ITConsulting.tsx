@@ -236,10 +236,10 @@ export function ITConsulting() {
                       </div>
                     </div>
 
-                    <div className="pt-6 mt-6 border-t border-white/5 flex items-center justify-between text-xs font-semibold tracking-wider text-gray-400 group-hover:text-[#00d9ff] transition-colors duration-300">
+                    <Link to="/contact" className="pt-6 mt-6 border-t border-white/5 flex items-center justify-between text-xs font-semibold tracking-wider text-gray-400 group-hover:text-[#00d9ff] transition-colors duration-300 cursor-pointer">
                       <span>DISCUSS REQUIREMENT</span>
                       <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-                    </div>
+                    </Link>
 
                   </div>
                 </motion.div>
