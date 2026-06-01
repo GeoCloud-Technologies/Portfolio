@@ -7,8 +7,8 @@ const services = [
     icon: Cpu,
     title: "Hardware R&D",
     subtitle: "The Physical Edge",
-    description: "Cutting-edge hardware development and research. From concept to prototype, we engineer the physical foundations of tomorrow's technology.",
-    features: ["Custom PCB Design", "IoT Device Development", "Embedded Systems", "Hardware Testing"],
+    description: "Cutting-edge hardware diagnostics and repair; development and research. From concept to prototype, we engineer the physical foundations of tomorrow's technology.",
+    features: ["Hardware Diagnostics & Repair", "IoT Device Development", "Embedded Systems", "Custom PCB Design"],
     gradient: "from-[#00d9ff] to-[#0088cc]",
     link: "/hardware-rd"
   },
@@ -34,7 +34,7 @@ const services = [
 
 export function ServicePillars() {
   return (
-    <section className="relative py-32 px-6 overflow-hidden">
+    <section id="service-pillars" className="relative py-32 px-6 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628] via-[#0f1f3a] to-[#0a1628]" />
 
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#00d9ff] to-transparent" />
