@@ -96,9 +96,12 @@ export function Hero() {
             >
               REQUEST A CONSULT
             </Link>
-            <button className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-3.5 border-2 border-white/30 text-white text-sm font-bold tracking-wide rounded-full hover:border-[#00d9ff] hover:text-[#00d9ff] transition-all duration-300">
+            <Link 
+              to="/#service-pillars" 
+              className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-3.5 border-2 border-white/30 text-white text-sm font-bold tracking-wide rounded-full hover:border-[#00d9ff] hover:text-[#00d9ff] transition-all duration-300 text-center flex items-center justify-center cursor-pointer"
+            >
               LEARN MORE
-            </button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

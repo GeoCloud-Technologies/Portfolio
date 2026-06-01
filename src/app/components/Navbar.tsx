@@ -11,8 +11,8 @@ export function Navbar() {
 
   const menuItems = [
     { name: "IT CONSULTING", path: "/it-consulting" },
-    { name: "SOFTWARE DEVELOPMENT", path: "/#software-development" },
-    { name: "AI INTEGRATION", path: "/#ai-integration" },
+    { name: "SOFTWARE DEVELOPMENT", path: "/software-development" },
+    { name: "AI INTEGRATION", path: "/ai-integration" },
     { name: "HARDWARE R&D", path: "/hardware-rd" },
     { name: "CONTACT", path: "/contact" }
   ];
