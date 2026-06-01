@@ -30,6 +30,7 @@ export default defineConfig({
         '/',
         '/about',
         '/it-consulting',
+        '/hardware-rd',
         '/contact'
       ],
     }),

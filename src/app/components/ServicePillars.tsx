@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { Cpu, Brain, Code } from "lucide-react";
+import { Link } from "react-router";
 
 const services = [
   {
@@ -8,7 +9,8 @@ const services = [
     subtitle: "The Physical Edge",
     description: "Cutting-edge hardware development and research. From concept to prototype, we engineer the physical foundations of tomorrow's technology.",
     features: ["Custom PCB Design", "IoT Device Development", "Embedded Systems", "Hardware Testing"],
-    gradient: "from-[#00d9ff] to-[#0088cc]"
+    gradient: "from-[#00d9ff] to-[#0088cc]",
+    link: "/hardware-rd"
   },
   {
     icon: Brain,
@@ -16,7 +18,8 @@ const services = [
     subtitle: "Cognitive Focus",
     description: "Intelligent systems that learn, adapt, and evolve. We build AI solutions that transform data into actionable insights and automated decisions.",
     features: ["Machine Learning Models", "Neural Networks", "Computer Vision", "NLP Solutions"],
-    gradient: "from-[#00ffea] to-[#00d9ff]"
+    gradient: "from-[#00ffea] to-[#00d9ff]",
+    link: "/#contact"
   },
   {
     icon: Code,
@@ -24,7 +27,8 @@ const services = [
     subtitle: "Scalable Platform",
     description: "Enterprise-grade software solutions built for scale. Modern architectures, cloud-native design, and seamless integration across your tech stack.",
     features: ["Cloud Architecture", "Web Applications", "API Development", "DevOps Integration"],
-    gradient: "from-[#0088cc] to-[#00ffea]"
+    gradient: "from-[#0088cc] to-[#00ffea]",
+    link: "/#contact"
   }
 ];
 
@@ -97,9 +101,9 @@ export function ServicePillars() {
                       </ul>
                     </div>
 
-                    <a href="#contact" className={`block text-center w-full mt-6 px-6 py-3 rounded-lg bg-gradient-to-r ${service.gradient} text-white opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-500 hover:shadow-[0_0_20px_rgba(0,217,255,0.4)]`}>
+                    <Link to={service.link} className={`block text-center w-full mt-6 px-6 py-3 rounded-lg bg-gradient-to-r ${service.gradient} text-white opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-500 hover:shadow-[0_0_20px_rgba(0,217,255,0.4)]`}>
                       Learn More
-                    </a>
+                    </Link>
                   </div>
 
                   <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#00d9ff]/20 to-transparent rounded-bl-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
