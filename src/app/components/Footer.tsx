@@ -38,7 +38,7 @@ export function Footer() {
             <h4 className="text-white mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <Link to="/#hardware-r-d" className="hover:text-[#00d9ff] cursor-pointer transition-colors block">
+                <Link to="/hardware-rd" className="hover:text-[#00d9ff] cursor-pointer transition-colors block">
                   Hardware R&D
                 </Link>
               </li>
