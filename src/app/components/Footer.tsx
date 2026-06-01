@@ -48,7 +48,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/#software-development" className="hover:text-[#00d9ff] cursor-pointer transition-colors block">
+                <Link to="/software-development" className="hover:text-[#00d9ff] cursor-pointer transition-colors block">
                   Software Development
                 </Link>
               </li>

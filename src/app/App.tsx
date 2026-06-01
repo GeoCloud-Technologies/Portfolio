@@ -6,6 +6,7 @@ import { Landing } from "./pages/Landing";
 import { AboutUs } from "./pages/AboutUs";
 import { ITConsulting } from "./pages/ITConsulting";
 import { HardwareRD } from "./pages/HardwareRD";
+import { SoftwareDevelopment } from "./pages/SoftwareDevelopment";
 import { Contact } from "./pages/Contact";
 
 function ScrollToHashElement() {
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/it-consulting" element={<ITConsulting />} />
           <Route path="/hardware-rd" element={<HardwareRD />} />
+          <Route path="/software-development" element={<SoftwareDevelopment />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
