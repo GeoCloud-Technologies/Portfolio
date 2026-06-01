@@ -43,7 +43,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/#ai-integration" className="hover:text-[#00d9ff] cursor-pointer transition-colors block">
+                <Link to="/ai-integration" className="hover:text-[#00d9ff] cursor-pointer transition-colors block">
                   AI Integration
                 </Link>
               </li>
