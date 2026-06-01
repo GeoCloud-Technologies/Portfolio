@@ -26,9 +26,9 @@ const services = [
     title: "Software Development",
     subtitle: "Scalable Platform",
     description: "Enterprise-grade software solutions built for scale. Modern architectures, cloud-native design, and seamless integration across your tech stack.",
-    features: ["Cloud Architecture", "Web Applications", "API Development", "DevOps Integration"],
+    features: ["Web/ Mobile Applications", "Cloud Architecture", "API Development", "DevOps Integration"],
     gradient: "from-[#0088cc] to-[#00ffea]",
-    link: "/#contact"
+    link: "/software-development"
   }
 ];
 
