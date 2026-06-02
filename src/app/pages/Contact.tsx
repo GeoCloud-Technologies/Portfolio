@@ -149,7 +149,7 @@ ${briefForm.specs}`;
             Establish <span className="bg-gradient-to-r from-[#00d9ff] to-[#00ffea] bg-clip-text text-transparent">Contact</span>
           </h1>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed font-light">
-            Initialize connection via our asynchronous intake system or schedule a live architecture blueprinting session directly with our experts.
+            Initialize contact via our request form or schedule a live session directly with our experts.
           </p>
         </motion.div>
 
@@ -163,7 +163,7 @@ ${briefForm.specs}`;
               <span className={`relative z-10 transition-colors duration-300 ${
                 activeTab === "brief" ? "text-[#0a1628]" : "text-gray-400 hover:text-white"
               }`}>
-                System Brief
+                Request form
               </span>
               {activeTab === "brief" && (
                 <motion.div
@@ -214,7 +214,7 @@ ${briefForm.specs}`;
               <div>
                 <h2 className="text-xl md:text-2xl font-bold text-white flex items-center gap-2">
                   <Cpu className="w-5 h-5 text-[#00d9ff]" />
-                  Submit a System Brief
+                  Submit a technical request
                 </h2>
                 <p className="text-sm text-gray-400 mt-2 font-light leading-relaxed">
                   Outline your technical bottleneck, infrastructure requirements or digital transformation goals. Our engineering team will conduct a review and initiate contact within 24 hours.
@@ -332,7 +332,7 @@ ${briefForm.specs}`;
                       </label>
                       <textarea
                         rows={4}
-                        placeholder="Describe your current workflow, the technical block you are facing, or the scale of your intended deployment."
+                        placeholder="Describe your current workflow, the technical block you are facing or the specifics of your request."
                         value={briefForm.specs}
                         onChange={e => setBriefForm({ ...briefForm, specs: e.target.value })}
                         className={`w-full bg-[#030c17]/50 border-b ${
@@ -447,10 +447,10 @@ ${briefForm.specs}`;
               <div>
                 <h2 className="text-xl md:text-2xl font-bold text-white flex items-center gap-2">
                   <CalendarIcon className="w-5 h-5 text-[#00ffea]" />
-                  Book an Architecture Session
+                  Book a Live Session
                 </h2>
                 <p className="text-sm text-gray-400 mt-2 font-light leading-relaxed">
-                  Bypass the inbox. Lock in a direct consultation with our lead technical architects to map out your infrastructure.
+                  Bypass the inbox. Lock in a direct consultation with an expert to discuss your requirements.
                 </p>
               </div>
             </div>
@@ -460,9 +460,8 @@ ${briefForm.specs}`;
                 <iframe 
                   src="https://calendar.app.google/3yMWURiyRW3EMxmG8"
                   width="100%" 
-                  height="100%" 
                   frameBorder="0" 
-                  className="relative z-10 opacity-90 filter invert-[0.9] hue-rotate-180"
+                  className="relative z-10 opacity-90 filter invert-[0.9] hue-rotate-180 w-full h-[720px] sm:h-[660px] lg:h-[580px]"
                   title="GeoCloud Scheduling Hub"
                 />
               </div>
