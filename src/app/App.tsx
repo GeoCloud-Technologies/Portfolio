@@ -9,6 +9,11 @@ import { HardwareRD } from "./pages/HardwareRD";
 import { SoftwareDevelopment } from "./pages/SoftwareDevelopment";
 import { AIIntegration } from "./pages/AIIntegration";
 import { Contact } from "./pages/Contact";
+import { PrivacyPolicy } from "./pages/PrivacyPolicy";
+import { TermsOfService } from "./pages/TermsOfService";
+import { Careers } from "./pages/Careers";
+import { CaseStudies } from "./pages/CaseStudies";
+import { Blog } from "./pages/Blog";
 
 function ScrollToHashElement() {
   const { pathname, hash } = useLocation();
@@ -44,6 +49,11 @@ export default function App() {
           <Route path="/software-development" element={<SoftwareDevelopment />} />
           <Route path="/ai-integration" element={<AIIntegration />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
         <Footer />
       </div>
