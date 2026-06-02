@@ -68,9 +68,21 @@ export function Footer() {
                   About Us
                 </Link>
               </li>
-              <li className="hover:text-[#00d9ff] cursor-pointer transition-colors">Careers</li>
-              <li className="hover:text-[#00d9ff] cursor-pointer transition-colors">Case Studies</li>
-              <li className="hover:text-[#00d9ff] cursor-pointer transition-colors">Blog</li>
+              <li>
+                <Link to="/careers" className="hover:text-[#00d9ff] cursor-pointer transition-colors block">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link to="/case-studies" className="hover:text-[#00d9ff] cursor-pointer transition-colors block">
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="hover:text-[#00d9ff] cursor-pointer transition-colors block">
+                  Blog
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -97,8 +109,8 @@ export function Footer() {
           <p>© 2026 GeoCloud Technologies. All rights reserved.</p>
           <p>Designed by <a href="https://www.georgeclaudio.me/" className="hover:text-[#00d9ff] transition-colors">George Claudio</a></p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-[#00d9ff] transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-[#00d9ff] transition-colors">Terms of Service</a>
+            <Link to="/privacy-policy" className="hover:text-[#00d9ff] transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-[#00d9ff] transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
