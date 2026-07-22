@@ -1,7 +1,29 @@
 import { motion } from "motion/react";
-import { Cpu, Brain, Code, ChevronDown, Play } from "lucide-react";
+import { ChevronDown, ExternalLink } from "lucide-react";
 import { EarthGlobe } from "./EarthGlobe";
 import { Link } from "react-router";
+import BIMAtelierLogo from "@/imports/BIMAtelier.jpeg";
+import TotozWellnessLogo from "@/imports/TotozWellness.jpeg";
+
+const showcaseProjects = [
+  {
+    title: "BIM Atelier Consult",
+    subtitle: "Architecture & Engineering Consultancy",
+    domain: "bimatelierconsult.co.ke",
+    url: "https://bimatelierconsult.co.ke/",
+    logo: BIMAtelierLogo,
+    description: "Building Information Modeling (BIM) & structural engineering solutions."
+  },
+  {
+    title: "Totoz Wellness",
+    subtitle: "Health & Wellness Platform",
+    domain: "totozwellness.org",
+    url: "https://www.totozwellness.org/",
+    logo: TotozWellnessLogo,
+    description: "Comprehensive maternal, pediatric, and healthcare services."
+  }
+];
+
 
 export function Hero() {
   return (
@@ -107,49 +129,59 @@ export function Hero() {
       </div>
 
       <motion.div
+        id="trusted-by"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}
-        className="relative z-10 pb-16"
+        className="relative z-10 pb-16 scroll-mt-24"
       >
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="text-[#00d9ff] text-xs uppercase tracking-wider text-center mb-6">
-            SERVICE MODULES
+        <div className="max-w-4xl mx-auto px-6">
+          <p className="text-[#00d9ff] text-xs uppercase tracking-[0.3em] font-semibold text-center mb-6">
+            TRUSTED BY
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { icon: Cpu, title: "HARDWARE R&D", subtitle: "Physical Infrastructure" },
-              { icon: Brain, title: "AI INTEGRATION", subtitle: "Cognitive Systems" },
-              { icon: Code, title: "SOFTWARE DEVELOPMENT", subtitle: "Digital Platforms" }
-            ].map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
-                  className="group relative overflow-hidden"
-                >
-                  <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-xl p-6 hover:border-[#00d9ff]/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,217,255,0.2)]">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#00d9ff]/20 to-[#00ffea]/20 flex items-center justify-center border border-[#00d9ff]/30">
-                        <Icon className="w-6 h-6 text-[#00d9ff]" />
-                      </div>
-                      <div>
-                        <h3 className="text-white font-medium text-sm mb-1">
-                          {service.title}
-                        </h3>
-                        <p className="text-gray-400 text-xs">
-                          {service.subtitle}
-                        </p>
-                      </div>
-                    </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+            {showcaseProjects.map((project, index) => (
+              <motion.a
+                key={project.title}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.9 + index * 0.15 }}
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="group relative overflow-hidden backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-[#00d9ff]/60 transition-all duration-300 hover:shadow-[0_0_35px_rgba(0,217,255,0.25)] flex items-center gap-5 cursor-pointer"
+              >
+                {/* Background hover gradient glow */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#00d9ff]/0 via-[#00d9ff]/10 to-[#00ffea]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                {/* Logo Frame */}
+                <div className="relative z-10 w-20 h-20 sm:w-24 sm:h-24 rounded-xl bg-white p-2.5 flex items-center justify-center shrink-0 border border-white/20 group-hover:border-[#00d9ff]/50 transition-all duration-300 shadow-md group-hover:shadow-[0_0_20px_rgba(0,217,255,0.3)]">
+                  <img
+                    src={project.logo}
+                    alt={project.title}
+                    className="w-full h-full object-contain rounded-lg group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                {/* Info Text */}
+                <div className="relative z-10 flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="text-white font-bold text-base sm:text-lg group-hover:text-[#00d9ff] transition-colors truncate">
+                      {project.title}
+                    </h3>
+                    <ExternalLink className="w-4 h-4 text-[#00d9ff] opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all shrink-0" />
                   </div>
-                </motion.div>
-              );
-            })}
+                  <p className="text-[#00d9ff]/90 text-xs font-semibold mb-1">
+                    {project.subtitle}
+                  </p>
+                  <p className="text-gray-400 text-xs truncate">
+                    {project.domain}
+                  </p>
+                </div>
+              </motion.a>
+            ))}
           </div>
         </div>
       </motion.div>
